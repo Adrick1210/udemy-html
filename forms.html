@@ -40,6 +40,8 @@
           placeholder="Enter a Number"
           id="number"
           name="num"
+          min="1"
+          max="1000"
         />
       </p>
       <button>Submit</button>
@@ -56,10 +58,65 @@
     </form>
     <h3>Hijakced Youtube</h3>
     <form action="https://www.youtube.com/results">
-        <input type="text" name="search_query">
-        <button>Search Youtube</button>
+      <input type="text" name="search_query" />
+      <button>Search Youtube</button>
     </form>
+    <hr />
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+      <input type="checkbox" name="agree_tos" id="agree" />
+      <label for="agree">I agree to everything</label>
+      <p>
+        <label for="xs">XS</label>
+        <input type="radio" name="size" id="xs" value="xs" />
+        <label for="s">S</label>
+        <input type="radio" name="size" id="xs" value="s" />
+        <label for="m">M</label>
+        <input type="radio" name="size" id="xs" value="m" />
+      </p>
+      <p>
+        <label for="">Please Select an Entree</label>
+        <select name="meal" id="meal">
+          <option value="fish">Fish</option>
+          <option value="veg">Vegitarian</option>
+          <option value="steak">Steak</option>
+        </select>
+      </p>
+      <p>
+        <label for="cheese">Amount of cheese:</label>
+        <input
+          type="range"
+          id="cheese"
+          min="1"
+          max="100"
+          value="75"
+          name="cheese_level"
+        />
+      </p>
+      <label for="requests?">Any Special Requests?</label>
+      <br />
+      <textarea
+        name="requests?"
+        id="requests"
+        cols="40"
+        rows="10"
+        placeholder="Type Something Here"
+      ></textarea>
+      <br />
+      <button>Submit</button>
+    </form>
+    <hr />
 
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+      <label for="first">Enter First Name</label>
+      <input type="text" name="first" id="first" required>
+      <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
+      </p>
+      <button>Submit</button>
+    </form>
   </body>
 </html>
 <!-- tacos?username=Adrick&password=1243&color=%23e01a1a&num=76 -->
